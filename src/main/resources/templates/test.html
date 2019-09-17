@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf 예제</title>
+</head>
+<body>
+    <h1>Thymeleaf 예제</h1>
+    <span th:text="${user.userId}"></span><br/>
+    <span th:text="${user.name}"></span><br/>
+    <span th:text="${user.authType}"></span><br/>
+    <p th:text="${new java.util.Date().toString()}"></p>
+
+    <p th:text="${#dates.format(new java.util.Date(), 'yyyy-MM-dd HH:mm')}"></p>
+    <p th:text="${#numbers.formatInteger(123,5)}"></p>
+    <p th:text="${#strings.toUpperCase('Welcome to Spring Boot')}"></p>
+
+    <p th:text="${uparam.get('id')[0]}"></p>
+    <p th:text="'id0=' + ${uparam.id[0]} + ', id1=' + ${uparam.id[1]}"></p>
+    <p th:text="'id0=' + ${param.id[0]} + ', id1=' + ${param.id[1]}"></p>
+
+    <h1 th:text="#{content.id}"></h1>
+    <p th:text="#{content.name}"></p>
+
+    <a th:href="@{'/home/' + ${param.id[0]}}">link</a>
+</body>
+</html>
