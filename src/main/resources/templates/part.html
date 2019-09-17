@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style th:fragment="frgStyle">
+        .frg {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fragment Sample</h1>
+    <div th:fragment="frgDiv">
+        <h2>frg</h2>
+        <p class="frg">frg message..</p>
+    </div>
+</body>
+</html>

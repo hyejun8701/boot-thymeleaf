@@ -3,8 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style th:include="part::frgStyle"></style>
 </head>
 <body>
+    <h1>Thymeleaf</h1>
+    <div th:include="part::frgDiv">
+        <h2>index</h2>
+        <p>index message..</p>
+    </div>
     <!--<h1 th:text="#{content.id}">Hello World</h1>
     <p th:text="${msg}">message.ddd</p>
     <p th:utext="${msg}">message.ddd</p>
@@ -16,63 +22,23 @@
 
     <p th:text="${object.id}"></p>-->
 
-    <h1>Hello</h1>
-    <!--<p th:text="${num} + ' : ' + (${check} ? ${trueVal} : ${falseVal})"></p>
-
-    <p th:if="${check}" th:text="${num} + ' : ' + ${trueVal}">true</p>
-    <p th:unless="${check}" th:text="${num} + ' : ' + ${falseVal}">false</p>
-
-    <div th:switch="${num}">
-        <p th:case="1" th:text="one">1</p>
-        <p th:case="2" th:text="two">2</p>
-        <p th:case="3" th:text="three">3</p>
-        <p th:case="*">?</p>
-    </div>
-
-    <p th:text="|expression : ${check}|"></p>
-
-    <table th:object="${list.get(__${check}__)}" border="1">
-        <tr>
-            <td>NAME</td>
-            <td>E-MAIL</td>
-        </tr>
-        &lt;!&ndash;<tr th:each="obj:${list}">
-            <td th:text="${obj[0]}"></td>
-            <td th:text="${obj[1]}"></td>
-        </tr>&ndash;&gt;
-        <tr>
-            <td th:text="*{name}"></td>
-            <td th:text="*{email}"></td>
-        </tr>
-    </table>
-
-    <table th:inline="text" border="1">
-        <tr>
-            <td>NAME</td>
-            <td>E-MAIL</td>
-        </tr>
-        <tr th:each="person:${list}">
-            <td>[[${person.name}]]</td>
-            <td>[[${person.email}]]</td>
-        </tr>
-    </table>-->
+    <!--<h1>Hello</h1>
 
     input value : <input type="number" id="val" /><br/>
-    result : <input type="number" id="result" readonly="readonly"/><br/>
+    result : <input type="number" id="result" readonly="readonly" /><br/>
 
     <button onClick="plus()">Click</button>
 
-    <script
-            src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
             integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
             crossorigin="anonymous">
     </script>
     <script th:inline="javascript">
         function plus() {
-            var val = $("#val).val();
+            var val = $("#val").val();
             var num = /*[[${num}]]*/
             $("#result").val(val*1 + num*1);
         }
-    </script>
+    </script>-->
 </body>
 </html>
